@@ -27,7 +27,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         for i in range(0,len(list_for_first_test)):
             self.Linked_List_for_zero_test.add_in_tail(LL_mod.Node(list_for_first_test[i]))
         node_1=self.Linked_List_for_zero_test.head
-        for i in range(0,self.Linked_List_for_zero_test.lenght_list()):
+        for i in range(0,self.Linked_List_for_zero_test.len()):
             print(node_1.value)
             self.assertEqual(list_for_first_test[i],node_1.value)
             node_1=node_1.next
@@ -44,7 +44,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         for i in range(0,len(list_for_second_test)):
             self.Linked_List_for_second_test.add_in_tail(LL_mod.Node(list_for_second_test[i]))
         node_2=self.Linked_List_for_second_test.head
-        for i in range(0,self.Linked_List_for_second_test.lenght_list()):
+        for i in range(0,self.Linked_List_for_second_test.len()):
             print(node_2.value)
             self.assertEqual(list_for_second_test[i],node_2.value)
             node_2=node_2.next
@@ -53,7 +53,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         list_for_second_test.insert(position_for_insert,value_for_insert)
         self.Linked_List_for_second_test.insert_node(position_for_insert,value_for_insert)
         node_2=self.Linked_List_for_second_test.head
-        for i in range(0,self.Linked_List_for_second_test.lenght_list()):
+        for i in range(0,self.Linked_List_for_second_test.len()):
             print(node_2.value)
             self.assertEqual(list_for_second_test[i],node_2.value)
             node_2=node_2.next
@@ -73,8 +73,8 @@ class Linked_List_2_Tests(unittest.TestCase):
         self.Linked_List_for_second_test.del_node(value_for_delete)
         self.Linked_List_for_second_test.print_all_nodes()
         node_2=self.Linked_List_for_second_test.head
-        print(self.Linked_List_for_second_test.lenght_list())
-        for i in range(0,self.Linked_List_for_second_test.lenght_list()):
+        print(self.Linked_List_for_second_test.len())
+        for i in range(0,self.Linked_List_for_second_test.len()):
             self.assertEqual(list_for_second_test[i],node_2.value)
             node_2=node_2.next
 
@@ -90,7 +90,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         for i in range(0,len(list_for_third_test)):
             self.Linked_List_for_third_test.add_in_tail(LL_mod.Node(list_for_third_test[i]))
         node_3=self.Linked_List_for_third_test.head
-        for i in range(0,self.Linked_List_for_third_test.lenght_list()):
+        for i in range(0,self.Linked_List_for_third_test.len()):
             print(node_3.value)
             self.assertEqual(list_for_third_test[i],node_3.value)
             node_3=node_3.next
@@ -98,7 +98,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         list_for_third_test.insert(position_for_insert,value_for_insert)
         self.Linked_List_for_third_test.insert_node(position_for_insert,value_for_insert)
         node_3=self.Linked_List_for_third_test.head
-        for i in range(0,self.Linked_List_for_third_test.lenght_list()):
+        for i in range(0,self.Linked_List_for_third_test.len()):
             print(node_3.value)
             self.assertEqual(list_for_third_test[i],node_3.value)
             node_3=node_3.next
@@ -119,8 +119,8 @@ class Linked_List_2_Tests(unittest.TestCase):
         self.Linked_List_for_third_test.del_node(value_for_delete)
         self.Linked_List_for_third_test.print_all_nodes()
         node_3=self.Linked_List_for_third_test.head
-        print(self.Linked_List_for_third_test.lenght_list())
-        for i in range(0,self.Linked_List_for_third_test.lenght_list()):
+        print(self.Linked_List_for_third_test.len())
+        for i in range(0,self.Linked_List_for_third_test.len()):
             self.assertEqual(list_for_third_test[i],node_3.value)
             node_3=node_3.next
         #Сложение двух списков
@@ -137,7 +137,7 @@ class Linked_List_2_Tests(unittest.TestCase):
             self.Linked_List_for_third_2_test.add_in_tail(LL_mod.Node(list_for_third_2_test[i]))
         Sum_LL=LL_mod.add_linked_lists(self.Linked_List_for_third_1_test,self.Linked_List_for_third_2_test)
         Sum_Node=Sum_LL.head
-        for i in range(0,Sum_LL.lenght_list()):
+        for i in range(0,Sum_LL.len()):
             self.assertEqual(Sum_Node.value,sum_list[i])
             Sum_Node=Sum_Node.next
 

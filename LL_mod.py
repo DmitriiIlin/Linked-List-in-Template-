@@ -61,7 +61,7 @@ class LinkedList:
             i+=1
         return element_result
 
-    def lenght_list(self):
+    def len(self):
         # Метод класса LL, определяющий кол-во э-в класса Node в LL (длина LL)
         node=self.head
         l=0
@@ -117,13 +117,13 @@ class LinkedList:
     
 def add_linked_lists(list_1,list_2):
 # Функция складывающая значения двух LL при условии равенства длин и равенства содержания знач.==int
-    if list_1.lenght_list()==list_2.lenght_list():
+    if list_1.len()==list_2.len():
         sum_linked_list=LinkedList()
         sum_node=None
         node_1=list_1.head
         node_2=list_2.head
         val=None
-        for i in range(0,list_1.lenght_list()):
+        for i in range(0,list_1.len()):
             if (int(node_1.value)==node_1.value) and (int(node_2.value)==node_2.value):
                 val=node_1.value+node_2.value
                 sum_node=Node(val)
