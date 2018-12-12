@@ -56,7 +56,7 @@ class LinkedList:
         node=self.head
         while node is not None:
             if node.value==val:
-                element_result.append(i)  
+                element_result.append(node)  
             node=node.next  
             i+=1
         return element_result
@@ -134,4 +134,4 @@ def add_linked_lists(list_1,list_2):
     else:
         return None
 
-    
+
