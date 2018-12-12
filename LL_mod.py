@@ -71,7 +71,7 @@ class LinkedList:
         return l 
 
 
-    def del_node(self,val,all=False):
+    def delete(self,val,all=False):
         # Метод удаления значения из LL, при all=False удаляет 1 элемент, при all=True удаляет все искомые элементы
         node = self.head
         while node is not None:

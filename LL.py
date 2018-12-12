@@ -70,7 +70,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         value_for_delete=list_for_second_test[index_for_delete]
         list_for_second_test.remove(value_for_delete)
         print(list_for_second_test)
-        self.Linked_List_for_second_test.del_node(value_for_delete)
+        self.Linked_List_for_second_test.delete(value_for_delete)
         self.Linked_List_for_second_test.print_all_nodes()
         node_2=self.Linked_List_for_second_test.head
         print(self.Linked_List_for_second_test.len())
@@ -116,7 +116,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         value_for_delete=list_for_third_test[index_for_delete]
         list_for_third_test.remove(value_for_delete)
         print(list_for_third_test)
-        self.Linked_List_for_third_test.del_node(value_for_delete)
+        self.Linked_List_for_third_test.delete(value_for_delete)
         self.Linked_List_for_third_test.print_all_nodes()
         node_3=self.Linked_List_for_third_test.head
         print(self.Linked_List_for_third_test.len())
