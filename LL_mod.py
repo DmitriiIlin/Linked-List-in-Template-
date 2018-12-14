@@ -88,12 +88,9 @@ class LinkedList:
                 self.tail=node_pr
                 node_pr.next=None
                 self.next=node_pr.next
-                if all==False:
-                    break
-            self.print_all_nodes()   
-            node_pr=node
+            if node.value!=val:
+                node_pr=node
             node=node.next
-        self.print_all_nodes()
 
     def insert_node(self,afternode,newNode):
         # Метод класса LL позволяющий вставить э-т Node в LL
@@ -133,5 +130,6 @@ def add_linked_lists(list_1,list_2):
         return sum_linked_list     
     else:
         return None
+
 
 
