@@ -88,6 +88,8 @@ class LinkedList:
                 self.tail=node_pr
                 node_pr.next=None
                 self.next=node_pr.next
+                if all==False:
+                    break
             if node.value!=val:
                 node_pr=node
             node=node.next
