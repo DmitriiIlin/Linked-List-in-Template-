@@ -75,6 +75,11 @@ class LinkedList:
         # Метод удаления значения из LL, при all=False удаляет 1 элемент, при all=True удаляет все искомые элементы
         node = self.head
         while node is not None:
+            if (self.head==self.tail) and (self.head.value==self.tail.value==val):
+                node=None
+                self.head=None
+                self.tail=None
+                break
             if (node.value==self.head.value) and (node.value==val):
                 new_head=node.next
                 self.head=new_head
@@ -132,6 +137,4 @@ def add_linked_lists(list_1,list_2):
         return sum_linked_list     
     else:
         return None
-
-
 
