@@ -51,7 +51,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         print(list_for_second_test)
         #Вставка элемента
         list_for_second_test.insert(position_for_insert,value_for_insert)
-        self.Linked_List_for_second_test.insert_node(position_for_insert,value_for_insert)
+        self.Linked_List_for_second_test.insert(position_for_insert,value_for_insert)
         node_2=self.Linked_List_for_second_test.head
         for i in range(0,self.Linked_List_for_second_test.len()):
             print(node_2.value)
@@ -96,7 +96,7 @@ class Linked_List_2_Tests(unittest.TestCase):
             node_3=node_3.next
         #Вставка элемента
         list_for_third_test.insert(position_for_insert,value_for_insert)
-        self.Linked_List_for_third_test.insert_node(position_for_insert,value_for_insert)
+        self.Linked_List_for_third_test.insert(position_for_insert,value_for_insert)
         node_3=self.Linked_List_for_third_test.head
         for i in range(0,self.Linked_List_for_third_test.len()):
             print(node_3.value)

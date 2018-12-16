@@ -99,7 +99,7 @@ class LinkedList:
                 node_pr=node
             node=node.next
 
-    def insert_node(self,afternode,newNode):
+    def insert(self,afternode,newNode):
         # Метод класса LL позволяющий вставить э-т Node в LL
         if self.head==None:
             self.tail=self.head=Node(newNode)
