@@ -101,25 +101,24 @@ class LinkedList:
 
     def insert(self,afternode,newNode):
         # Метод класса LL позволяющий вставить э-т Node в LL
-        if self.head==None:
+        if  self.head==None:
             node=Node(newNode)
             node.next=None
             self.head=node
             self.tail=node
-        elif afternode==0:
-            new_node=Node(newNode)
-            new_node.next=self.head
-            self.head=new_node
         else:
             curr_node=self.head
-            count=1
             while curr_node != None:
-                if count==afternode:
+                if (curr_node.value==afternode):
                     new_node=Node(newNode)
                     new_node.next=curr_node.next
                     curr_node.next=new_node
                     break
-                count+=1    
+                elif (curr_node==self.tail) and (curr_node.value==afternode):
+                    new_node=Node(newNode)
+                    curr_node.next=new_node
+                    self.tail=new_node
+                    break    
                 curr_node=curr_node.next
     
 def add_linked_lists(list_1,list_2):
@@ -140,4 +139,5 @@ def add_linked_lists(list_1,list_2):
         return sum_linked_list     
     else:
         return None
+
 
