@@ -141,5 +141,3 @@ def add_linked_lists(list_1,list_2):
         return None
 
 
-
-
