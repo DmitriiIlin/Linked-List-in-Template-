@@ -106,7 +106,7 @@ class LinkedList:
             node.next=None
             self.head=node
             self.tail=node
-        else:
+        elif (self.head!=None):
             curr_node=self.head
             while curr_node != None:
                 if (curr_node.value==afternode):
@@ -139,5 +139,6 @@ def add_linked_lists(list_1,list_2):
         return sum_linked_list     
     else:
         return None
+
 
 
