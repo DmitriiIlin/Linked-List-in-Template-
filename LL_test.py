@@ -16,7 +16,8 @@ class Linked_List_2_Tests(unittest.TestCase):
         i=random_number()
         Node=Node_create(i)
         LL_1.add_in_tail(Node)
-        LL_2.insert(None,i)
+        if LL_2.len()==0:
+            LL_2.insert(None,i)
         Node_LL_1=LL_1.head
         Node_LL_2=LL_2.head
         for j in range (0,LL_1.len()):
@@ -41,8 +42,6 @@ class Linked_List_2_Tests(unittest.TestCase):
         Node_LL_2=LL_2.head
         for j in range (0,LL_1.len()):
             self.assertEqual(Node_LL_1.value,Node_LL_2.value)
-
-
 
     def test_insert_in_last_position(self):
         #Вставка в конец списка
@@ -88,10 +87,6 @@ class Linked_List_2_Tests(unittest.TestCase):
             self.assertEqual(Node_LL_1.value,Node_LL_2.value)    
 
         
-
-
-
-
 
 if __name__ == '__main__':
     try:
