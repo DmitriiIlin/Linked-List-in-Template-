@@ -109,11 +109,11 @@ class LinkedList:
         elif (self.head!=None):
             curr_node=self.head
             while curr_node != None:
-                if (curr_node.value==afterNode):
+                if (curr_node.value==afterNode.value):
                     newNode.next=curr_node.next
                     curr_node.next=newNode
                     break
-                elif (curr_node==self.tail) and (curr_node.value==afterNode):
+                elif (curr_node==self.tail) and (curr_node.value==afterNode.value):
                     curr_node.next=newNode
                     self.tail=newNode
                     break    

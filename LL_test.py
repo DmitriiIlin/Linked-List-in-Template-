@@ -33,8 +33,8 @@ class Linked_List_2_Tests(unittest.TestCase):
             j=random_number()
             data.append(j)
         LL_1.add_in_tail(Node_create(data[0]))
-        LL_1.insert(data[0],Node_create(data[1]))
-        LL_1.insert(data[1],Node_create(data[2]))
+        LL_1.insert(Node_create(data[0]),Node_create(data[1]))
+        LL_1.insert(Node_create(data[1]),Node_create(data[2]))
         Node_LL_1=LL_1.head
         for i in range (0,LL_1.len()):
             self.assertEqual(Node_LL_1.value,data[i])
@@ -50,7 +50,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         for i in range(0,10):
             RN=random_number()
             if i==9:
-                LL_1.insert(data[i],Node_create(RN))
+                LL_1.insert(Node_create(data[i]),Node_create(RN))
                 data.append(i)
             else:
                 LL_1.add_in_tail(Node_create(data[i]))
@@ -70,7 +70,7 @@ class Linked_List_2_Tests(unittest.TestCase):
         for i in range(0,len(data)):
             LL_1.add_in_tail(Node_create(data[i]))
         data.insert(random_position,random_value)
-        LL_1.insert(data[random_position-1],Node_create(random_value))    
+        LL_1.insert(Node_create(data[random_position-1]),Node_create(random_value))    
         Node_LL_1=LL_1.head
         for i in range(0,LL_1.len()):
             self.assertEqual(Node_LL_1.value,data[i])
