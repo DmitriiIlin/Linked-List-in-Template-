@@ -63,16 +63,21 @@ class Linked_List_2_Tests(unittest.TestCase):
        #Вставка в случайную позицию, случайного значения
         LL_1=LL_mod.LinkedList()
         data=[]
-        random_position=random.randint(1,8)
-        random_value=random.randint(1,100)
-        for i in range(0,10):
-            data.append(random_number())    
-        for i in range(0,len(data)):
-            LL_1.add_in_tail(Node_create(data[i]))
-        data.insert(random_position,random_value)
-        LL_1.insert(Node_create(data[random_position-1]),Node_create(random_value))    
+        random_len=random.randint(5,10)
+        random_number=random.randint(1,random_len-1)
+        insert_value=random.randint(1,99)
+        for i in range(0,random_len):
+            data.append(random.randint(100,10**8))
+        for j in range(0,len(data)):
+            Node=Node_create(data[j])
+            if j == random_number:
+                after_Node=Node
+            LL_1.add_in_tail(Node)  
+        data.insert(random_number+1,insert_value)
+        new_Node=Node_create(insert_value)
+        LL_1.insert(after_Node,new_Node)
         Node_LL_1=LL_1.head
-        for i in range(0,LL_1.len()):
+        for i in range(0,len(data)):
             self.assertEqual(Node_LL_1.value,data[i])
             Node_LL_1=Node_LL_1.next    
 
